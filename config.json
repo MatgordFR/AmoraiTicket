@@ -1,0 +1,24 @@
+{
+    "token": "TON_TOKEN_ICI",
+
+    "color_principal": "72223d",
+
+    "ticket_channel": "ID_DU_SALON_TICKET",
+    "ticket_category": "ID_DE_LA_CATEGORIE",
+    "Salon_ticket_logs": "ID_DU_SALON_LOGS_TICKETS",
+    "logs_redémarrer_bot": "ID_DU_SALON_LOGS_BOT",
+
+    "Role_proprietaire": "ID_DU_ROLE_PROPRIO",
+    "Role_staff": "ID_DU_ROLE_STAFF",
+    "Role_responsable_giveaway": "ID_DU_ROLE_GIVEAWAY",
+    "Role_responsable_partner": "ID_DU_ROLE_PARTENARIAT",
+
+    "ticket_report": "🚨",
+    "ticket_partenariat": "🤝",
+    "ticket_question": "❓",
+    "ticket_giveaway": "🎁",
+
+    "emoji_Bot": "🤖",
+    "emoji_Soon_actif": "✅",
+    "emoji_Soon_attente": "⏳"
+}
