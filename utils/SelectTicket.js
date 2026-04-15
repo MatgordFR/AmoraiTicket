@@ -17,7 +17,7 @@ module.exports = {
             });
         }
 
-        await interaction.deferReply({ ephemeral: true });
+        await interaction.deferReply({ flags: MessageFlags.Ephemeral });
 
         try {
             const c = await interaction.guild.channels.create({
