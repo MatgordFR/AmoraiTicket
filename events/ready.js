@@ -26,8 +26,12 @@ module.exports = {
 
         const avatarURL = client.user.displayAvatarURL();
 
+        // Couleur robuste : accepte "RRGGBB" ou "#RRGGBB" ; défaut si absente/invalide (évite un embed qui plante).
+        const rawColor = String(config.color_principal ?? '').trim().replace(/^#/, '');
+        const color = /^[0-9a-fA-F]{6}$/.test(rawColor) ? `#${rawColor}` : '#5865F2';
+
         const demarrerEmbed = new EmbedBuilder()
-            .setColor(config.color_principal)
+            .setColor(color)
             .setThumbnail(avatarURL)
             .setAuthor({ name: `${client.user.username} vient de redémarrer`, iconURL: avatarURL })
             .addFields(

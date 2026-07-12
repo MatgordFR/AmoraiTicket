@@ -1,7 +1,7 @@
 {
     "token": "TON_TOKEN_ICI",
 
-    "color_principal": "72223d",
+    "color_principal": "#72223d",
 
     "ticket_channel": "ID_DU_SALON_TICKET",
     "ticket_category": "ID_DE_LA_CATEGORIE",

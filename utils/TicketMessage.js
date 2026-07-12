@@ -21,11 +21,14 @@ module.exports = async (client) => {
     }
 
     const avatarURL = client.user.displayAvatarURL();
+    // Couleur robuste : accepte "RRGGBB" ou "#RRGGBB" ; défaut si absente/invalide.
+    const rawColor = String(config.color_principal ?? '').trim().replace(/^#/, '');
+    const color = /^[0-9a-fA-F]{6}$/.test(rawColor) ? `#${rawColor}` : '#5865F2';
 
     channel.send({
         embeds: [
             new EmbedBuilder()
-                .setColor(config.color_principal)
+                .setColor(color)
                 .setAuthor({ name: `・Contacter le support du serveur.`, iconURL: avatarURL })
                 .setDescription(`**Pour créer un ticket, il vous suffit de __cliquer sur le bouton__.\n\n\`Veillez à ouvrir le bon ticket, s'il vous plaît.\`**`)
                 .setImage('attachment://discord.png')

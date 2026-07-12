@@ -3,6 +3,16 @@ const { readdirSync } = require('fs');
 const path = require('path');
 const config = require("./config.json");
 
+// Validation de la config au démarrage : un message clair vaut mieux qu'un crash obscur plus loin.
+const requis = ["token", "ticket_channel", "ticket_category"];
+const manquants = requis.filter(k => !config[k] || String(config[k]).trim() === "");
+if (config.token === "TON_TOKEN_ICI") manquants.push("token (c'est encore la valeur d'exemple)");
+if (manquants.length) {
+    console.error(`[CONFIG] config.json invalide — clés manquantes ou vides : ${manquants.join(", ")}.`);
+    console.error("[CONFIG] Copie config.example.json vers config.json et remplis-le.");
+    process.exit(1);
+}
+
 const client = new Client({
     intents: [
         GatewayIntentBits.Guilds,

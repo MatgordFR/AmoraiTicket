@@ -1,11 +1,14 @@
 {
-  "name": "amoraiticket",
+  "name": "discord-ticket-transcript",
   "version": "1.0.0",
-  "description": "Bot de tickets Discord - MatgordFR",
+  "description": "Bot de tickets Discord avec transcription HTML automatique à la fermeture — MatgordFR",
   "license": "ISC",
   "author": "MatgordFR",
   "type": "commonjs",
   "main": "index.js",
+  "engines": {
+    "node": ">=18.0.0"
+  },
   "scripts": {
     "start": "node index.js"
   },
